@@ -571,7 +571,7 @@
 		
         <div class="row mt-5 justify-content-center" data-aos="fade-up">
           <div class="col-lg-10">
-            <form action="https://email-api-endpoints.glitch.me/send_message" method="post" role="form" class="php-email-form">
+            <form action="https://modular-closets.glitch.me/send_message" method="post" role="form" class="php-email-form">
               <div class="form-row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -709,102 +709,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   
-  
-  <!-- for recent projects -->
-  <script>
-	
-	function recentProject(place, work, category, title, desc)
-	{
-		this.workPlace = place;
-		this.work = work;
-		this.category = category;
-		this.title = title;
-		this.desc = desc;
-	}
-	
-	var ourSuccess = new Array();
-	ourSuccess.push(new recentProject("assets/img/projects/project1.jpg", "assets/img/projects/recent-1.jpg", "closets", "May 2020", "The number one reason why customer service is important in a business is because it correlates to revenue: 84% of organizations"));
-	ourSuccess.push(new recentProject("assets/img/projects/project2.jpg", "assets/img/projects/recent-2.jpg", "showerDoor", "June 2020", "The number one reason why customer service is important in a business is because it correlates to revenue: 84% of organizations"));
-	ourSuccess.push(new recentProject("assets/img/projects/project3.jpg", "assets/img/projects/recent-3.jpg", "showerDoor", "Jan 2020", "The number one reason why customer service is important in a business is because it correlates to revenue: 84% of organizations"));
-	ourSuccess.push(new recentProject("assets/img/projects/project4.jpg", "assets/img/projects/recent-4.jpg", "closets", "August 2019", "The number one reason why customer service is important in a business is because it correlates to revenue: 84% of organizations"));
-	ourSuccess.push(new recentProject("assets/img/projects/project5.jpg", "assets/img/projects/recent-5.jpg", "showerDoor", "March 2019", "The number one reason why customer service is important in a business is because it correlates to revenue: 84% of organizations"));
-	ourSuccess.push(new recentProject("assets/img/projects/project6.jpg", "assets/img/projects/recent-6.jpg", "showerDoor", "May 2018", "The number one reason why customer service is important in a business is because it correlates to revenue: 84% of organizations"));
-	
-	block = document.getElementById("recentProjects");
-	
-	for (let obj of ourSuccess)
-	{
-		block.innerHTML += 
-		'<div class="col-lg-4 col-md-6 portfolio-item ' + obj.category + '" data-aos="fade-up"> \
-			<div class="box14 position:relative"> \
-				<img class="w-100 h-auto rounded-5 projectImage" src="' + obj.workPlace + '" alt=""> \
-				<div class="box-content position-absolute  mw-90 mx-auto"> \
-					<div class="box-content-text  mw-90 mx-auto"> \
-						<h3 class="title">' + obj.title + '</h3> \
-						<span class="post">' + obj.desc + '</span> \
-					</div> \
-				</div> \
-			</div> \
-		</div>';
-	}
-	
-	var isService = true;
-	setInterval(function() {
-		
-	var projectImgBlocks = document.getElementsByClassName('projectImage');
-	
-	for (let i=0; i< projectImgBlocks.length; i++)
-	{
-		if(isService)
-			newImg = ourSuccess[i].work;
-		else
-			newImg = ourSuccess[i].workPlace;
-		
-		projectImgBlocks[i].src = newImg;
-	}
-	isService = !isService;
-	
-}, 3000);
-  </script>
-  
-   <!-- for Gallery -->
-  <script>
-	
-	function galleryBlock(image, title, desc)
-	{
-		this.image = image;
-		this.title = title;
-		this.desc = desc;
-	}
-	
-	var ourGallery = new Array();
-	ourGallery.push(new galleryBlock("assets/img/projects/recent-1.jpg", "May 2020", "The number one reason why customer service is important in a business is because it correlates to revenue: 84% of organizations"));
-	ourGallery.push(new galleryBlock("assets/img/projects/recent-2.jpg", "June 2020", "The number one reason why customer service is important in a business is because it correlates to revenue: 84% of organizations"));
-	ourGallery.push(new galleryBlock("assets/img/projects/recent-3.jpg", "Jan 2020", "The number one reason why customer service is important in a business is because it correlates to revenue: 84% of organizations"));
-	ourGallery.push(new galleryBlock("assets/img/projects/recent-4.jpg", "August 2019", "The number one reason why customer service is important in a business is because it correlates to revenue: 84% of organizations"));
-	ourGallery.push(new galleryBlock("assets/img/projects/recent-5.jpg", "March 2019", "The number one reason why customer service is important in a business is because it correlates to revenue: 84% of organizations"));
-	ourGallery.push(new galleryBlock("assets/img/projects/recent-6.jpg", "May 2018", "The number one reason why customer service is important in a business is because it correlates to revenue: 84% of organizations"));
-	
-	block = document.getElementById("gallery");
-	
-	for (let obj of ourGallery)
-	{
-		block.innerHTML += 
-		'<div class="col-xl-4 col-md-6 mb-4" data-aos="fade-up"> \
-			<div class="box14 position:relative"> \
-				<img class="w-100 h-auto rounded-5 galleryImage" src="' + obj.image + '" alt=""> \
-				<div class="box-content position-absolute  mw-90 mx-auto"> \
-					<div class="box-content-text  mw-90 mx-auto"> \
-						<h3 class="title">' + obj.title + '</h3> \
-						<span class="post">' + obj.desc + '</span> \
-					</div> \
-				</div> \
-			</div> \
-		</div>';
-	}
-	
-  </script>
-
+  <script src="js/loadData.js"></script>
 </body>
 
 </html>
